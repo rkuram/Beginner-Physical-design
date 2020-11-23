@@ -73,24 +73,31 @@ Steps involved to define pre-placed cells and it’s advantages of enhancing reu
 ![PIC9](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_1.PNG)
 
 Cell design Flow:
-One thing that is common in all the physical design flow is the library cell. Cell design flow contains 3 steps to characterize the cells.
-•	Inputs: Inputs for cell design flow are provided by foundry from PDKs (Process design kits), which includes DRC and LVS rules, SPICE models, Library, and user defined specs
-•	Design steps: Design steps of cell design involve circuit design (implementing the function and model it to meet the library requirements), layout design (implementing the values from circuit design into the layout using the art of layout) and characterization. The software GUNA is used for characterization and can be classifies as timing, power, and noise characterization.
-•	Outputs: Outputs of the design are CDL (circuit description language), GDSII, LEF, extracted spice netlist (.cir), timing, noise, power libs and function.
+
+- One thing that is common in all the physical design flow is the library cell. Cell design flow contains 3 steps to characterize the cells.
+- Inputs: Inputs for cell design flow are provided by foundry from PDKs (Process design kits), which includes DRC and LVS rules, SPICE models, Library, and user defined specs
+- Design steps: Design steps of cell design involve circuit design (implementing the function and model it to meet the library requirements), layout design (implementing the values from circuit design into the layout using the art of layout) and characterization. The software GUNA is used for characterization and can be classifies as timing, power, and noise characterization.
+- Outputs: Outputs of the design are CDL (circuit description language), GDSII, LEF, extracted spice netlist (.cir), timing, noise, power libs and function.
+
 Typical characterization flow:
-•	Reading the model file of CMOS containing basic property definitions.
-•	Reading the extracted Spice Netlist.
-•	Recognize / Define the behavior of the buffer cell.
-•	Read the subcircuits -- of the inverter.
-•	Attach the necessary power sources.
-•	Apply an input or the stimulus.
-•	Provide the necessary load capacitance.
-•	Provide the necessary simulation commands.
+
+- Reading the model file of CMOS containing basic property definitions.
+- Reading the extracted Spice Netlist.
+- Recognize / Define the behavior of the buffer cell.
+- Read the subcircuits -- of the inverter.
+- Attach the necessary power sources.
+- Apply an input or the stimulus.
+- Provide the necessary load capacitance.
+- Provide the necessary simulation commands.
+
 Important parameters of Timing Characterization:
-•	Rise Delay: Time taken for waveform to rise from 20% to 80% of VDD.
-•	Fall Delay: Time taken for waveform to fall from 80% to 20% of VDD.
-•	Propagation Delay: Measured between 50% of Input transition to 50% of Output transition.
+
+- Rise Delay: Time taken for waveform to rise from 20% to 80% of VDD.
+- Fall Delay: Time taken for waveform to fall from 80% to 20% of VDD.
+- Propagation Delay: Measured between 50% of Input transition to 50% of Output transition.
+
 Lab:
+
 - Pin Placement by auto arranging 
 
 ![PIC10](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_1.PNG)
