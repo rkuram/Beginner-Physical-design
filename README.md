@@ -65,8 +65,8 @@ Q flow is the tool chain that incorporates all these open-source tools for a com
 
 On Day 2, definition of width and heigh of the core were explained. Later, concepts like Utilization factor and Aspect ratio were explained in detail and their importance in designing the floorplan was also mentioned. Ideally, utilization factor is around 0.5 (50%) or 0.6 (60%).
 
-Utilization factor = (Area occupied by netlist)/ (Total are of the core)
-Aspect ratio = (Height of the die)/ (Width of the die)
+- Utilization factor = (Area occupied by netlist)/ (Total are of the core)
+- Aspect ratio = (Height of the die)/ (Width of the die)
 
 Steps involved to define pre-placed cells and it’s advantages of enhancing reusability, and also how de-coupling capacitors are placed around the pre-placed cells which help during switching avoiding IR drop and the signal to be within noise margin was explained. As de-coupling capacitors ensures proper local communication by pre-charging, power planning the core ensures global communication by providing multiple Vdd and ground tap points to avoid voltage droop and ground bounce in the wires and other logic cells. The initial placement is optimized during the PnR tool flow by estimating wirelength and capacitance and adding buffer. Steps of pin placement and logical cell placement blockage are explained so that PnR tool does not place anything between core and die. 
 
@@ -74,7 +74,8 @@ Steps involved to define pre-placed cells and it’s advantages of enhancing reu
 
 Cell design Flow:
 
-- One thing that is common in all the physical design flow is the library cell. Cell design flow contains 3 steps to characterize the cells.
+One thing that is common in all the physical design flow is the library cell. Cell design flow contains 3 steps to characterize the cells.
+
 - Inputs: Inputs for cell design flow are provided by foundry from PDKs (Process design kits), which includes DRC and LVS rules, SPICE models, Library, and user defined specs
 - Design steps: Design steps of cell design involve circuit design (implementing the function and model it to meet the library requirements), layout design (implementing the values from circuit design into the layout using the art of layout) and characterization. The software GUNA is used for characterization and can be classifies as timing, power, and noise characterization.
 - Outputs: Outputs of the design are CDL (circuit description language), GDSII, LEF, extracted spice netlist (.cir), timing, noise, power libs and function.
@@ -96,7 +97,7 @@ Important parameters of Timing Characterization:
 - Fall Delay: Time taken for waveform to fall from 80% to 20% of VDD.
 - Propagation Delay: Measured between 50% of Input transition to 50% of Output transition.
 
-Lab:
+###Lab:
 
 - Pin Placement by auto arranging 
 
@@ -106,11 +107,11 @@ Lab:
 
 ![PIC11](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_2.PNG)
 
-- Placement log file (3)
+- Placement log file
 
 ![PIC12](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_3.PNG)
 
-- Layout area after placement (4)
+- Layout area after placement
 
 ![PIC13](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_4.PNG)
 
@@ -151,7 +152,7 @@ The art of layout uses Euler’s path and stick diagram to design the layout acc
 
 ![PIC16](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_3.PNG)
 
-Lab:
+###Lab:
 
 - Inverter spice file and it change in waveform with respective to change in Wp from 0.5 to 0.75
 
@@ -201,7 +202,8 @@ Setup and hold time define a window of time in which our data should remain unch
 ![PIC29](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_4.PNG)
 
 
-Lab:
+###Lab:
+
 - Inverter transient spice file and analysis with 20fF load
 
 ![PIC30](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_1.PNG)
@@ -265,8 +267,9 @@ We also need a header file to include the SPEF, design name and the default unit
 ![PIC37](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_1.PNG)
 
 
-Lab:
-•	Routing in progress using qrouter
+###Lab:
+
+-	Routing in progress using qrouter
 
 ![PIC38](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_Lab_1.PNG)
 
@@ -282,7 +285,7 @@ Lab:
 
 ## Acknowledgements:
 1.	Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
-2.	Nickson P Jose, Teaching Assistant,VSD Corp. Pvt. Ltd. (*insert hyperlinks*)
+2.	Nickson P Jose, Teaching Assistant (VSD Corp. Pvt. Ltd)
 
 
 
