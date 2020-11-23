@@ -11,13 +11,14 @@ This repository contains all the information included in the beginner physical d
 6. Day5: Final Steps for RTL2GDS
 7. Acknowledgements
 
-## 1. Introduction to Qflow:
+## Introduction to Qflow:
 
 Qflow is a complete tool chain for synthesizing digital circuits starting from Verilog source and ending in physical layout for a specific target fabrication process which is developed by Open Circuit Design. The main goal of this workshop is to use the tool chain which contains open source tools like Yosys, graywolf, MAGIC, Netgen etc., to get an overview of how the physical design flow works on an SoC.
 More details on Qflow can be obtained *here* (*insert hyperlink*)
 http://opencircuitdesign.com/qflow/#:~:text=Qflow%20is%20a%20complete%20tool,a%20specific%20target%20fabrication%20process.
 
-Day 1:  Study and review of various components of RISC-V based PicoSoC
+## Day1:  Study and review of various components of RISC-V based PicoSoC
+
 Day 1 starts with an introduction on IC design component technologies where we discuss the on how this workshop is base on the chip design, which is not related to embedded devices. The package, that is on the chip, discussed in this workshop is Quad Flat No-leads (QFN-48) which is of size 7mm x 7mm. The chip is connected to the package by wire bounds where it contains the pads, core and die.  The consists of logic blocks which are classified into Macros (like SPI and SoC) and Foundry Ip’s (like SRAM, ADC, etc.,).
 We then discuss about RISV-V Instruction Set Architecture (ISA) flow and how it helps the applications on the computers communicate with the hardware. In ISA flow, the app code (high level language) is converted to instructions based .exe file using a compiler which in turn is converted to binary using an assembler. The compiled instructions are based on the architecture type the hardware is based on and it is an implementation of RTL using hardware Descriptive Language (HDL). For graphical representation, please refer to the below picture.
 *insert content picture 1*
@@ -40,7 +41,8 @@ Lab:
 •	Magic layout (5)
 •	Syntheisi log (6)
 
-Day-2: Chip planning strategies and introduction to foundry library cells
+## Day2: Chip planning strategies and introduction to foundry library cells
+
 On Day 2, definition of width and heigh of the core were explained. Later, concepts like Utilization factor and Aspect ratio were explained in detail and their importance in designing the floorplan was also mentioned. Ideally, utilization factor is around 0.5 (50%) or 0.6 (60%).
 Utilization factor = (Area occupied by netlist)/ (Total are of the core)
 Aspect ratio = (Height of the die)/ (Width of the die)
@@ -71,7 +73,8 @@ Lab:
 •	Layout area after placement (4)
 
 
-Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
+## Day3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
+
 On Day3, SPICE deck creation for an CMOS inverter along with the art of layout including DRC layout rules was explained. SPICE deck formation contains information like connectivity of the netlist, values, and information about nodes. The W/L ratio of CMOS impacts the co Conductivity and the width of pmos is generally maintained around 2 to 2.5 times of width of nmos. CMOS robustness is defined byt eh switching threshold (vm), which is a parameter defining the conditions Vin = Vout, Vgs = vds, and Idsp = -Idsn.
 *Insert content picture 1*
 
@@ -107,7 +110,8 @@ Lab:
 •	Post-layout magic and area (7)
 •	Post layout extracted spice file modification and simulation (8,9)
 
-Day4: Pre-layout timing analysis and importance of good clock tree
+## Day4: Pre-layout timing analysis and importance of good clock tree
+
 On Day4, concepts of time modelling using delay tables, power aware clock tree synthesis, signal integrity and timing analysis with both ideal and real clock were explained. I learned that delay and output transition in a cell is based on input transition and load capacitance. Power aware CTS refers to clock gating which helps in reducing the power consumption by not enabling the clock to the cell that are not in use aa a particular period.
 Clock Tree Synthesis (CTS) is used for providing clock to all the logic cells with the goal of maintaining zero skew. The H-tree algorithm along with clock buffering were explained based on the delay tables and how there are certain conditions to be satisfied for the clock buffers (equal rise and fall time) for an efficient CTS. The concepts of clock-net shielding are explained to reduce crosstalk issues like glitch and delta delay which may affect the clock skew.
 *insert content pictures 1,2*
@@ -121,7 +125,8 @@ Lab:
 •	Files to perform timing analysis (4,5)
 •	Timing analysis with ideal and real clocks (6,7)
 
-Day5: Final Steps for RTL2GDS
+## Day5: Final Steps for RTL2GDS
+
 Routing method finds out best possible pattern for connection between two end points, of which one point is target node while the other is source node. Maze Routing-Lee's Algorithm was introduced. In this technique firstly routing grids are created, and source & target nodes are identified. Then the blocks adjacent to one under consideration are assigned same numbers and this process is repeated till we reach the target node. Once this done the pattern with minimum number of turns preferably a L spaced pattern is finalized for route.
 Typical DRC rules for pair of wires:
 •	Wire width
