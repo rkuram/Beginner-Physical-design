@@ -38,7 +38,7 @@ The core that we use in this workshop is PicoRV32, which is a RISC-V RV32IMC cor
 
 A brief introduction to IC design components along with their respective open-source tools are mentioned as below:
 
-- Logic Synthesis – ** Yosys open synthesis suite **
+- Logic Synthesis – **Yosys open synthesis suite**
 - FloorPlaanning, Placement, CTS – Graywolf
 - Routing – Qrouter
 - Static Timing Analysis (STA) – Opentimer
