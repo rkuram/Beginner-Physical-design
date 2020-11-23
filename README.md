@@ -36,7 +36,7 @@ A brief introduction to IC design components along with their respective open-so
 -	Schematic editor – esim
 Q flow is the tool chain that incorporates all these open-source tools for a complete RTL2GSS flow.
 
-Lab:
+### Lab:
 
 - To clone VSDflow from github
 
