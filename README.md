@@ -97,7 +97,7 @@ Important parameters of Timing Characterization:
 - Fall Delay: Time taken for waveform to fall from 80% to 20% of VDD.
 - Propagation Delay: Measured between 50% of Input transition to 50% of Output transition.
 
-###Lab:
+### Lab:
 
 - Pin Placement by auto arranging 
 
@@ -123,8 +123,8 @@ On Day3, SPICE deck creation for an CMOS inverter along with the art of layout i
 
 Netlist description of CMOS:
 
-M1 <drain> <gate> <source> <substrate> pmos W=<#>u L= <#>u
-M2 <drain> <gate> <source> <substrate> nmos W= <#>u L=<#>u
+- M1 <drain> <gate> <source> <substrate> pmos W=<#>u L= <#>u
+- M2 <drain> <gate> <source> <substrate> nmos W= <#>u L=<#>u
 
 Command for DC Analysis:
 
@@ -152,7 +152,7 @@ The art of layout uses Euler’s path and stick diagram to design the layout acc
 
 ![PIC16](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_3.PNG)
 
-###Lab:
+### Lab:
 
 - Inverter spice file and it change in waveform with respective to change in Wp from 0.5 to 0.75
 
@@ -202,7 +202,7 @@ Setup and hold time define a window of time in which our data should remain unch
 ![PIC29](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_4.PNG)
 
 
-###Lab:
+### Lab:
 
 - Inverter transient spice file and analysis with 20fF load
 
@@ -267,7 +267,7 @@ We also need a header file to include the SPEF, design name and the default unit
 ![PIC37](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_1.PNG)
 
 
-###Lab:
+### Lab:
 
 -	Routing in progress using qrouter
 
