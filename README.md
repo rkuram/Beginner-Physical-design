@@ -19,7 +19,7 @@ More details on Qflow can be obtained [here](http://opencircuitdesign.com/qflow/
 
 Day 1 starts with an introduction on IC design component technologies where we discuss the on how this workshop is base on the chip design, which is not related to embedded devices. The package, that is on the chip, discussed in this workshop is Quad Flat No-leads (QFN-48) which is of size 7mm x 7mm. The chip is connected to the package by wire bounds where it contains the pads, core and die.  The consists of logic blocks which are classified into Macros (like SPI and SoC) and Foundry Ip’s (like SRAM, ADC, etc.,).
 We then discuss about RISV-V Instruction Set Architecture (ISA) flow and how it helps the applications on the computers communicate with the hardware. In ISA flow, the app code (high level language) is converted to instructions based .exe file using a compiler which in turn is converted to binary using an assembler. The compiled instructions are based on the architecture type the hardware is based on and it is an implementation of RTL using hardware Descriptive Language (HDL). For graphical representation, please refer to the below picture.
-*insert content picture 1*
+![PIC1](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_1.PNG)
 The core that we use in this workshop is PicoRV32, which is a RISC-V RV32IMC core. The key features of the PicoRV32 core, PicoSoc, Raven SoC, and Raven chip along with the differences between the two Soc’s are explained. Please refer the below figure for PicoSoC.
 *insert content picture 2*
 A brief introduction to IC design components along with their respective open-source tools are mentioned as below:
