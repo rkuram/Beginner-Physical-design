@@ -2,7 +2,7 @@
 This repository contains all the information included in the beginner physical design using open- source EDA tools organized by VLSI System Design Corporation. This workshop helped me gain hands-on experience of tools that are used in physical design flow using Qflow tool chain with complete RTL to GDSII flow on PicoRV32.
 
 ## Contents:
-1. Introduction to Qflow(https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#1-introduction-to-qflow)
+1. [Introduction to Qflow](https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#1-introduction-to-qflow)
 2. Day 1: Study and review of various components of RISC-V based picoSoC
 3. Day 2: Chip planning strategies and introduction to foundry library cells
 4. Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
