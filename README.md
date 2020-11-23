@@ -91,11 +91,21 @@ Important parameters of Timing Characterization:
 •	Fall Delay: Time taken for waveform to fall from 80% to 20% of VDD.
 •	Propagation Delay: Measured between 50% of Input transition to 50% of Output transition.
 Lab:
-•	Pin Placement by auto arranging (1)
-•	Running placement with setting aspect ratio and utilization factor (2)
-•	Placement log file (3)
-•	Layout area after placement (4)
+- Pin Placement by auto arranging 
 
+![PIC10](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_1.PNG)
+
+- Running placement with setting aspect ratio and utilization factor
+
+![PIC11](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_2.PNG)
+
+- Placement log file (3)
+
+![PIC12](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_3.PNG)
+
+- Layout area after placement (4)
+
+![PIC13](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_4.PNG)
 
 ## Day3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
 
