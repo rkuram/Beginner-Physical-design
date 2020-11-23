@@ -13,8 +13,7 @@ This repository contains all the information included in the beginner physical d
 ## Introduction to Qflow:
 
 Qflow is a complete tool chain for synthesizing digital circuits starting from Verilog source and ending in physical layout for a specific target fabrication process which is developed by Open Circuit Design. The main goal of this workshop is to use the tool chain which contains open source tools like Yosys, graywolf, MAGIC, Netgen etc., to get an overview of how the physical design flow works on an SoC.
-More details on Qflow can be obtained *here* (*insert hyperlink*)
-http://opencircuitdesign.com/qflow/#:~:text=Qflow%20is%20a%20complete%20tool,a%20specific%20target%20fabrication%20process.
+More details on Qflow can be obtained [here](http://opencircuitdesign.com/qflow/#:~:text=Qflowisacompletetool,aspecifictargetfabricationprocess)
 
 ## Day1:  Study and review of various components of RISC-V based PicoSoC
 
