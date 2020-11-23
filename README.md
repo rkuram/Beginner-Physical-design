@@ -2,15 +2,16 @@
 This repository contains all the information included in the beginner physical design using open- source EDA tools organized by VLSI System Design Corporation. This workshop helped me gain hands-on experience of tools that are used in physical design flow using Qflow tool chain with complete RTL to GDSII flow on PicoRV32.
 
 ## Contents:
-1.	Introduction to Qflow
-2.	Day 1: Study and review of various components of RISC-V based picoSoC
-3.	Day 2: Chip planning strategies and introduction to foundry library cells
-4.	Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
-5.	Day4: Pre-layout timing analysis and importance of good clock tree
-6.	Day5: Final Steps for RTL2GDS
-7.	Acknowledgements
+1. Introduction to Qflow
+2. Day 1: Study and review of various components of RISC-V based picoSoC
+3. Day 2: Chip planning strategies and introduction to foundry library cells
+4. Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
+5. Day4: Pre-layout timing analysis and importance of good clock tree
+6. Day5: Final Steps for RTL2GDS
+7. Acknowledgements
 
-1. Introduction to Qflow:
+## 1. Introduction to Qflow:
+
 Qflow is a complete tool chain for synthesizing digital circuits starting from Verilog source and ending in physical layout for a specific target fabrication process which is developed by Open Circuit Design. The main goal of this workshop is to use the tool chain which contains open source tools like Yosys, graywolf, MAGIC, Netgen etc., to get an overview of how the physical design flow works on an SoC.
 More details on Qflow can be obtained *here* (*insert hyperlink*)
 http://opencircuitdesign.com/qflow/#:~:text=Qflow%20is%20a%20complete%20tool,a%20specific%20target%20fabrication%20process.
