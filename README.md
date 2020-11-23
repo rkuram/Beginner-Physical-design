@@ -3,7 +3,9 @@ This repository contains all the information included in the beginner physical d
 
 ## Contents:
 [Introduction to Qflow](https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#1-introduction-to-qflow)
+
 [Day 1: Study and review of various components of RISC-V based picoSoC](https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#day2-chip-planning-strategies-and-introduction-to-foundry-library-cells)
+
 3. Day 2: Chip planning strategies and introduction to foundry library cells
 4. Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
 5. Day4: Pre-layout timing analysis and importance of good clock tree
