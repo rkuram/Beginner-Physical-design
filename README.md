@@ -64,10 +64,14 @@ Lab:
 ## Day2: Chip planning strategies and introduction to foundry library cells
 
 On Day 2, definition of width and heigh of the core were explained. Later, concepts like Utilization factor and Aspect ratio were explained in detail and their importance in designing the floorplan was also mentioned. Ideally, utilization factor is around 0.5 (50%) or 0.6 (60%).
+
 Utilization factor = (Area occupied by netlist)/ (Total are of the core)
 Aspect ratio = (Height of the die)/ (Width of the die)
+
 Steps involved to define pre-placed cells and it’s advantages of enhancing reusability, and also how de-coupling capacitors are placed around the pre-placed cells which help during switching avoiding IR drop and the signal to be within noise margin was explained. As de-coupling capacitors ensures proper local communication by pre-charging, power planning the core ensures global communication by providing multiple Vdd and ground tap points to avoid voltage droop and ground bounce in the wires and other logic cells. The initial placement is optimized during the PnR tool flow by estimating wirelength and capacitance and adding buffer. Steps of pin placement and logical cell placement blockage are explained so that PnR tool does not place anything between core and die. 
-*Insert content picture 1*
+
+![PIC9](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_1.PNG)
+
 Cell design Flow:
 One thing that is common in all the physical design flow is the library cell. Cell design flow contains 3 steps to characterize the cells.
 •	Inputs: Inputs for cell design flow are provided by foundry from PDKs (Process design kits), which includes DRC and LVS rules, SPICE models, Library, and user defined specs
