@@ -4,12 +4,11 @@ This repository contains all the information included in the beginner physical d
 ## Contents:
 - [Introduction to Qflow](https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#1-introduction-to-qflow)
 - [Day 1: Study and review of various components of RISC-V based picoSoC](https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#day2-chip-planning-strategies-and-introduction-to-foundry-library-cells)
-
-3. Day 2: Chip planning strategies and introduction to foundry library cells
-4. Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
-5. Day4: Pre-layout timing analysis and importance of good clock tree
-6. Day5: Final Steps for RTL2GDS
-7. Acknowledgements
+- [Day 2: Chip planning strategies and introduction to foundry library cells](https://github.com/rkuram/Beginner-Physical-design/blob/main/README.md#day2-chip-planning-strategies-and-introduction-to-foundry-library-cells)
+- [Day 3: Design characterize one library cell using MAGIC Layout tool and ngSPICE](https://github.com/rkuram/Beginner-Physical-design#day3-design-characterize-one-library-cell-using-magic-layout-tool-and-ngspice)
+- [Day4: Pre-layout timing analysis and importance of good clock tree(https://github.com/rkuram/Beginner-Physical-design#day4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+- [Day5: Final Steps for RTL2GDS](https://github.com/rkuram/Beginner-Physical-design#day5-final-steps-for-rtl2gds)
+- Acknowledgements
 
 ## Introduction to Qflow:
 
@@ -161,7 +160,7 @@ Lab:
 •	Layout showing metal connections after routing (2)
 •	Pre and post routing timing analysis (3,4)
 
-Acknowledgements:
+## Acknowledgements:
 1.	Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 2.	Nickson P Jose, Teaching Assistant,VSD Corp. Pvt. Ltd. (*insert hyperlinks*)
 
