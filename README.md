@@ -1,7 +1,7 @@
 # Beginner physical design using open-source EDA tools
 This repository contains all the information included in the beginner physical design using open- source EDA tools organized by VLSI System Design Corporation. This workshop helped me gain hands-on experience of tools that are used in physical design flow using Qflow tool chain with complete RTL to GDSII flow on PicoRV32.
 
-Contents:
+## Contents:
 1.	Introduction to Qflow
 2.	Day 1: Study and review of various components of RISC-V based picoSoC
 3.	Day 2: Chip planning strategies and introduction to foundry library cells
