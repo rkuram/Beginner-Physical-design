@@ -39,35 +39,36 @@ The core that we use in this workshop is PicoRV32, which is a RISC-V RV32IMC cor
 A brief introduction to IC design components along with their respective open-source tools are mentioned as below:
 
 - Logic Synthesis – **Yosys open synthesis suite**
-- FloorPlaanning, Placement, CTS – Graywolf
-- Routing – Qrouter
-- Static Timing Analysis (STA) – Opentimer
--	Layout – MAGIC layout viewer
--	Pre/Post-layout spice simulations – ngSPICE
--	Schematic editor – esim
+- FloorPlaanning, Placement, CTS – **Graywolf**
+- Routing – **Qrouter**
+- Static Timing Analysis (STA) – **Opentimer**
+-	Layout – **MAGIC layout viewer**
+-	Pre/Post-layout spice simulations – **ngSPICE**
+-	Schematic editor – **esim**
+
 Q flow is the tool chain that incorporates all these open-source tools for a complete RTL2GSS flow.
 
 ### Lab:
 
-- To clone VSDflow from github
+- **To clone VSDflow from github**
 
 ![PIC3](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_1.PNG)
 
-- Files in outdir_spi_slave 
+- **Files in outdir_spi_slave** 
 
 ![PIC4](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_2.PNG)
 
 ![PIC5](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_4.PNG)
 
-- Qflow display
+- **Qflow display**
 
 ![PIC6](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_3.PNG)
 
-•	Magic layout
+-	**Magic layout**
 
 ![PIC7](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_5.PNG)
 
-•	Synthesis log
+-	**Synthesis log**
 
 ![PIC8](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_6.PNG)
 
@@ -76,22 +77,22 @@ Q flow is the tool chain that incorporates all these open-source tools for a com
 
 On Day 2, definition of width and heigh of the core were explained. Later, concepts like Utilization factor and Aspect ratio were explained in detail and their importance in designing the floorplan was also mentioned. Ideally, utilization factor is around 0.5 (50%) or 0.6 (60%).
 
-- Utilization factor = (Area occupied by netlist)/ (Total are of the core)
-- Aspect ratio = (Height of the die)/ (Width of the die)
+- **Utilization factor** = (Area occupied by netlist)/ (Total are of the core)
+- **Aspect ratio** = (Height of the die)/ (Width of the die)
 
 Steps involved to define pre-placed cells and it’s advantages of enhancing reusability, and also how de-coupling capacitors are placed around the pre-placed cells which help during switching avoiding IR drop and the signal to be within noise margin was explained. As de-coupling capacitors ensures proper local communication by pre-charging, power planning the core ensures global communication by providing multiple Vdd and ground tap points to avoid voltage droop and ground bounce in the wires and other logic cells. The initial placement is optimized during the PnR tool flow by estimating wirelength and capacitance and adding buffer. Steps of pin placement and logical cell placement blockage are explained so that PnR tool does not place anything between core and die. 
 
 ![PIC9](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_1.PNG)
 
-Cell design Flow:
+**Cell design Flow:**
 
 One thing that is common in all the physical design flow is the library cell. Cell design flow contains 3 steps to characterize the cells.
 
-- Inputs: Inputs for cell design flow are provided by foundry from PDKs (Process design kits), which includes DRC and LVS rules, SPICE models, Library, and user defined specs
-- Design steps: Design steps of cell design involve circuit design (implementing the function and model it to meet the library requirements), layout design (implementing the values from circuit design into the layout using the art of layout) and characterization. The software GUNA is used for characterization and can be classifies as timing, power, and noise characterization.
-- Outputs: Outputs of the design are CDL (circuit description language), GDSII, LEF, extracted spice netlist (.cir), timing, noise, power libs and function.
+- **Inputs**: Inputs for cell design flow are provided by foundry from PDKs (Process design kits), which includes DRC and LVS rules, SPICE models, Library, and user defined specs
+- **Design steps**: Design steps of cell design involve circuit design (implementing the function and model it to meet the library requirements), layout design (implementing the values from circuit design into the layout using the art of layout) and characterization. The software GUNA is used for characterization and can be classifies as timing, power, and noise characterization.
+- **Outputs**: Outputs of the design are CDL (circuit description language), GDSII, LEF, extracted spice netlist (.cir), timing, noise, power libs and function.
 
-Typical characterization flow:
+**Typical characterization flow**:
 
 - Reading the model file of CMOS containing basic property definitions.
 - Reading the extracted Spice Netlist.
@@ -102,56 +103,62 @@ Typical characterization flow:
 - Provide the necessary load capacitance.
 - Provide the necessary simulation commands.
 
-Important parameters of Timing Characterization:
+**Important parameters of Timing Characterization**:
 
-- Rise Delay: Time taken for waveform to rise from 20% to 80% of VDD.
-- Fall Delay: Time taken for waveform to fall from 80% to 20% of VDD.
-- Propagation Delay: Measured between 50% of Input transition to 50% of Output transition.
+- **Rise Delay**: Time taken for waveform to rise from 20% to 80% of VDD.
+- **Fall Delay**: Time taken for waveform to fall from 80% to 20% of VDD.
+- **Propagation Delay**: Measured between 50% of Input transition to 50% of Output transition.
 
 ### Lab:
 
-- Pin Placement by auto arranging 
+- **Pin Placement by auto arranging** 
 
 ![PIC10](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_1.PNG)
 
-- Running placement with setting aspect ratio and utilization factor
+- **Running placement with setting aspect ratio and utilization factor**
 
 ![PIC11](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_2.PNG)
 
-- Placement log file
+- **Placement log file**
 
 ![PIC12](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_3.PNG)
 
-- Layout area after placement
+- **Layout area after placement**
 
 ![PIC13](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day2_Lab_4.PNG)
 
+
 ## Day3: Design characterize one library cell using MAGIC Layout tool and ngSPICE
 
-On Day3, SPICE deck creation for an CMOS inverter along with the art of layout including DRC layout rules was explained. SPICE deck formation contains information like connectivity of the netlist, values, and information about nodes. The W/L ratio of CMOS impacts the co Conductivity and the width of pmos is generally maintained around 2 to 2.5 times of width of nmos. CMOS robustness is defined byt eh switching threshold (vm), which is a parameter defining the conditions Vin = Vout, Vgs = vds, and Idsp = -Idsn.
+On Day3, SPICE deck creation for an CMOS inverter along with the art of layout including DRC layout rules was explained. SPICE deck formation contains information like connectivity of the netlist, values, and information about nodes. The W/L ratio of CMOS impacts the co Conductivity and the width of pmos is generally maintained around 2 to 2.5 times of width of nmos. CMOS robustness is defined byt eh switching threshold (vm), which is a parameter defining the conditions 
+
+- Vin = Vout 
+- Vgs = vds 
+- Idsp = -Idsn.
 
 ![PIC14](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_1.PNG)
 
-Netlist description of CMOS:
+**Netlist description of CMOS**:
 
 - M1 <drain> <gate> <source> <substrate> pmos W=<#>u L= <#>u
 - M2 <drain> <gate> <source> <substrate> nmos W= <#>u L=<#>u
 
-Command for DC Analysis:
+**Command for DC Analysis**:
 
 .dc Vin <low level> <high level> <step increase>
 
-Command for transient analysis:
+**Command for transient analysis**:
 
 .tran <Tstep> <Tstop>
 
-Art of layout and DRC rules:
+**Art of layout and DRC rules**:
 
 The art of layout uses Euler’s path and stick diagram to design the layout according to the DRC rules provided by the foundry.
 
 ![PIC15](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_2.PNG)
 
-16-Mask CMOS Process steps:
+**16-Mask CMOS Process steps**:
+
 - Substrate Selection: Selection of base layer on which other regions will be formed.
 - Create active region for transistors: SiO2 and si3N2 deposited. Pockets created using photoresist and lithography.
 - Nwell & Pwell formation: Pwell uses boron and nwell uses phosphorous. Drive in diffusion by placing in high temp furnace.
@@ -165,7 +172,7 @@ The art of layout uses Euler’s path and stick diagram to design the layout acc
 
 ### Lab:
 
-- Inverter spice file and it change in waveform with respective to change in Wp from 0.5 to 0.75
+- **Inverter spice file and it change in waveform with respective to change in Wp from 0.5 to 0.75**
 
 ![PIC17](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_1.PNG)
 
@@ -173,21 +180,21 @@ The art of layout uses Euler’s path and stick diagram to design the layout acc
 
 ![PIC19](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_3.PNG)
 
-- Inverter transient analysis at Wp = 0.75
+- **Inverter transient analysis at Wp = 0.75**
 
 ![PIC20](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_4.PNG)
 
-- Pre-layout spice file and simulation
+- **Pre-layout spice file and simulation**
 
 ![PIC21](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_5.PNG)
 
 ![PIC22](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_6.PNG) 
 
-- Post-layout magic and area
+- **Post-layout magic and area**
 
 ![PIC23](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_7.PNG)
 
-- Post layout extracted spice file modification and simulation
+- **Post layout extracted spice file modification and simulation**
 
 ![PIC24](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day3_Lab_8.PNG)
 
@@ -204,7 +211,7 @@ Clock Tree Synthesis (CTS) is used for providing clock to all the logic cells wi
 
 ![PIC27](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_2.PNG)
 
-Setup and Hold Slack Analysis:
+**Setup and Hold Slack Analysis**:
 
 Setup and hold time define a window of time in which our data should remain unchanged for desired data transfer to take place. Factors like uncertainty (due to jitter) and skew plays an important role in this. Slack is defined as difference between actual time and required time and a design with positive or zero slack is desired which indicates that there is no violation of timing. Below are some figures showing the equations for setup and hold time analysis.
 
@@ -215,33 +222,34 @@ Setup and hold time define a window of time in which our data should remain unch
 
 ### Lab:
 
-- Inverter transient spice file and analysis with 20fF load
+- **Inverter transient spice file and analysis with 20fF load**
 
 ![PIC30](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_1.PNG)
 
 ![PIC31](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_2.PNG)
 
-- Osu018 standard cell library
+- **Osu018 standard cell library**
 
 ![PIC32](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_3.PNG)
 
-- Files to perform timing analysis
+- **Files to perform timing analysis**
 
 ![PIC33](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_4.PNG)
 
 ![PIC34](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_5.PNG)
 
-- Timing analysis with ideal and real clocks (6,7)
+- **Timing analysis with ideal and real clocks**
 
 ![PIC35](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_6.PNG)
 
 ![PIC36](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day4_Lab_7.PNG)
 
+
 ## Day5: Final Steps for RTL2GDS
 
 Routing method finds out best possible pattern for connection between two end points, of which one point is target node while the other is source node. Maze Routing-Lee's Algorithm was introduced. In this technique firstly routing grids are created, and source & target nodes are identified. Then the blocks adjacent to one under consideration are assigned same numbers and this process is repeated till we reach the target node. Once this done the pattern with minimum number of turns preferably a L spaced pattern is finalized for route.
 
-Typical DRC rules for pair of wires:
+**Typical DRC rules for pair of wires**:
 
 - Wire width
 - Wire pitch
@@ -249,13 +257,13 @@ Typical DRC rules for pair of wires:
 
 These DRC rules exist because of limitations of the Lithography technique. Deviation takes place in lithography leading to changes which might lead to an unintended open circuit or short circuit and to avoid this the DRC rules are fixed. Another DRC Violation type is Signal short which can be dealt by changing layers through Vias.
 
-Typical DRC rules for Vias:
+**Typical DRC rules for Vias**:
 - Via width
 - Via spacing
 
 Concepts of parasitic extraction has been discussed where we use IEEE 1481 – 1999 SPEF (Standard Parasitic Exchange Format) as a representation format. We have discussed on a single wire connecting the input port to a buffer.
 
-The components mentioned in the SPEF file are:
+**The components mentioned in the SPEF file are**:
 
 - I – Input port
 - *L – Load (capacitance)
@@ -280,21 +288,22 @@ We also need a header file to include the SPEF, design name and the default unit
 
 ### Lab:
 
--	Routing in progress using qrouter
+-	**Routing in progress using qrouter**
 
 ![PIC38](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_Lab_1.PNG)
 
-- Layout showing metal connections after routing
+- **Layout showing metal connections after routing**
 
 ![PIC38](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_Lab_2.PNG)
 
-- Pre and post routing timing analysis
+- **Pre and post routing timing analysis**
 
 ![PIC39](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_Lab_3.PNG)
 
 ![PIC40](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day5_Lab_4.PNG)
 
 ## Acknowledgements:
+
 1.	Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 2.	Nickson P Jose, Teaching Assistant (VSD Corp. Pvt. Ltd)
 
