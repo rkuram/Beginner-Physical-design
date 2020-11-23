@@ -19,25 +19,47 @@ More details on Qflow can be obtained [here](http://opencircuitdesign.com/qflow/
 
 Day 1 starts with an introduction on IC design component technologies where we discuss the on how this workshop is base on the chip design, which is not related to embedded devices. The package, that is on the chip, discussed in this workshop is Quad Flat No-leads (QFN-48) which is of size 7mm x 7mm. The chip is connected to the package by wire bounds where it contains the pads, core and die.  The consists of logic blocks which are classified into Macros (like SPI and SoC) and Foundry Ip’s (like SRAM, ADC, etc.,).
 We then discuss about RISV-V Instruction Set Architecture (ISA) flow and how it helps the applications on the computers communicate with the hardware. In ISA flow, the app code (high level language) is converted to instructions based .exe file using a compiler which in turn is converted to binary using an assembler. The compiled instructions are based on the architecture type the hardware is based on and it is an implementation of RTL using hardware Descriptive Language (HDL). For graphical representation, please refer to the below picture.
+
 ![PIC1](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_1.PNG)
+
 The core that we use in this workshop is PicoRV32, which is a RISC-V RV32IMC core. The key features of the PicoRV32 core, PicoSoc, Raven SoC, and Raven chip along with the differences between the two Soc’s are explained. Please refer the below figure for PicoSoC.
-*insert content picture 2*
+
+![PIC2](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_2.PNG)
+
 A brief introduction to IC design components along with their respective open-source tools are mentioned as below:
-•	Logic Synthesis – Yosys open synthesis suite
-•	FloorPlaanning, Placement, CTS – Graywolf
-•	Routing – Qrouter
-•	Static Timing Analysis (STA) – Opentimer
-•	Layout – MAGIC layout viewer
-•	Pre/Post-layout spice simulations – ngSPICE
-•	Schematic editor – esim
+- Logic Synthesis – Yosys open synthesis suite
+- FloorPlaanning, Placement, CTS – Graywolf
+- Routing – Qrouter
+- Static Timing Analysis (STA) – Opentimer
+-	Layout – MAGIC layout viewer
+-	Pre/Post-layout spice simulations – ngSPICE
+-	Schematic editor – esim
 Q flow is the tool chain that incorporates all these open-source tools for a complete RTL2GSS flow.
 
 Lab:
-•	To clone VSDflow from github (1)
-•	Files in outdir_spi_slave (2 and 4)
-•	Qflow display (3)
-•	Magic layout (5)
-•	Syntheisi log (6)
+
+- To clone VSDflow from github
+
+![PIC3](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_1.PNG)
+
+- Files in outdir_spi_slave 
+
+![PIC4](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_2.PNG)
+
+![PIC5](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_4.PNG)
+
+- Qflow display
+
+![PIC6](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_3.PNG)
+
+•	Magic layout
+
+![PIC7](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_5.PNG)
+
+•	Synthesis log
+
+![PIC8](https://github.com/rkuram/Beginner-Physical-design/blob/main/Images/Day1_Lab_6.PNG)
+
 
 ## Day2: Chip planning strategies and introduction to foundry library cells
 
